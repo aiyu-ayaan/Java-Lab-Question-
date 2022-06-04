@@ -5,21 +5,21 @@ import java.util.regex.Pattern;
 
 public class AllQuestions {
     public static void main(String[] args) {
-                        int num, dem;
-                System.out.println("Enter 1 fraction :- ");
-                System.out.print("Enter numerator :- ");
-                num = new Scanner(System.in).nextInt();
-                dem = new Scanner(System.in).nextInt();
-                Fraction f1 = new Fraction(num, dem);
+        int num, dem;
+        System.out.println("Enter 1 fraction :- ");
+        System.out.print("Enter numerator :- ");
+        num = new Scanner(System.in).nextInt();
+        dem = new Scanner(System.in).nextInt();
+        Fraction f1 = new Fraction(num, dem);
 
-                System.out.println("Enter 2 fraction :- ");
-                num = new Scanner(System.in).nextInt();
-                dem = new Scanner(System.in).nextInt();
-                Fraction f2 = new Fraction(num, dem);
-                sumFraction(f1, f2);
-                subFraction(f1, f2);
-                mulFraction(f1, f2);
-                divFraction(f1, f2);
+        System.out.println("Enter 2 fraction :- ");
+        num = new Scanner(System.in).nextInt();
+        dem = new Scanner(System.in).nextInt();
+        Fraction f2 = new Fraction(num, dem);
+        sumFraction(f1, f2);
+        subFraction(f1, f2);
+        mulFraction(f1, f2);
+        divFraction(f1, f2);
     }
 
 
@@ -32,7 +32,7 @@ public class AllQuestions {
 
         double sum = Math.sqrt(Math.abs(Math.sin(radian))) + Math.sqrt(Math.abs(Math.cos(radian)));
         System.out.println("We all know that 'Sin\u00B2(θ) +Cos\u00B2(θ) = 1' where degree <=180" +
-                           "\nputting the value in of degree in given equation :-");
+                "\nputting the value in of degree in given equation :-");
         System.out.println("Sin\u00B2(" + degree + ") + " + "Cos\u00B2(" + degree + ")" + " =" + sum);
     }
 
@@ -186,10 +186,10 @@ public class AllQuestions {
 
         for (char i : sb.toString().toUpperCase().toCharArray()) {
             if (i == 'A' ||
-                i == 'E' ||
-                i == 'I' ||
-                i == 'O' ||
-                i == 'U') vowel++;
+                    i == 'E' ||
+                    i == 'I' ||
+                    i == 'O' ||
+                    i == 'U') vowel++;
         }
         System.out.println("Input sentence has " + word + " words and " + vowel + " vowels");
     }
@@ -198,10 +198,10 @@ public class AllQuestions {
     private static void question14() {
         try {
             System.out.println("Enter choose :- " +
-                               "\n1 for NumberFormatException " +
-                               "\n2 for ArrayIndexOutOfBoundsException" +
-                               "\n3 for ArithmeticException" +
-                               "\n :-");
+                    "\n1 for NumberFormatException " +
+                    "\n2 for ArrayIndexOutOfBoundsException" +
+                    "\n3 for ArithmeticException" +
+                    "\n :-");
             int exceptionType = new Scanner(System.in).nextInt();
             switch (exceptionType) {
                 case 1: {
@@ -327,7 +327,7 @@ public class AllQuestions {
         var userPassword = new Scanner(System.in).nextLine().trim();
         var isValid = (validatePassword(userPassword)) ?
                 "Enter password passes all given condition \n" +
-                "Welcome " + userName :
+                        "Welcome " + userName :
                 "Enter password not passes all given condition";
         System.out.println(isValid);
     }
@@ -337,7 +337,7 @@ public class AllQuestions {
         var VALIDATE_EXPRESSION_WORD_START = "[a-zA-Z]{3,}[0-9]{2,}";
 
         return Pattern.matches(VALIDATE_EXPRESSION_NUMBER_START, password)
-               || Pattern.matches(VALIDATE_EXPRESSION_WORD_START, password);
+                || Pattern.matches(VALIDATE_EXPRESSION_WORD_START, password);
     }
 
     //    Question 25

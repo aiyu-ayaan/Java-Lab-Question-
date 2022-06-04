@@ -7,7 +7,7 @@ public class MyQuestion {
 
     public static void main(String[] args) {
 //        question29();
-        question14();
+//        question14();
     }
 
     //    Question 12

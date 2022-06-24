@@ -7,6 +7,8 @@ package LabQuestion;
  * department and two sub-classes Regular and Casual. The Regular staff has data members level and
  * consolidated-pay and Casual has data member daily-wage. Take all inputs through constructors and
  * write appropriate methods for displaying one data for each type of class.<h2/>
+ *
+ * @see LabQuestion.Questions for all other question
  */
 public class Question18 {
     public static void main(String[] args) {

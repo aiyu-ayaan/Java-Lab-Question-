@@ -106,17 +106,86 @@ class Question6 {
 }
 
 /**
+ * <h1>Ayaan</h1>
  * <p>Java lab question solution (Sem 3)</p>
  *
  * @author ayaan
  * @version 1.0
+ * @see LabQuestion.Question18 question 18
+ * @see LabQuestion.Question19 question 19
+ * @see LabQuestion.Question23 question 23
+ * @see LabQuestion.Question25 question 25
+ * @see LabQuestion.Question27 question 27
+ * @see LabQuestion.Question28 question 28
  * @since 24 may 2021
  */
 
 public class Questions {
-    public static void main(String[] args) {
-//        28
-        question29();
+    public static void main(String[] args) throws Exception {
+        question30();
+    }
+
+    /**
+     * 30. Write a program in Java to create 3 threads and exhibit their behaviour by changing their priorities in
+     * the “main” thread. Display the possible output
+     *
+     * @throws Exception only for line reduction
+     */
+    private static void question30() throws Exception {
+        var t1 = new Thread(() -> {
+            for (var i = 0; i <= 5; i++) {
+                System.out.println("t1");
+                try {
+                    Thread.sleep(1000);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }, "Thread One");
+
+        var t2 = new Thread(() -> {
+            for (var i = 0; i <= 5; i++) {
+                System.out.println("t2");
+                try {
+                    Thread.sleep(1000);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }, "Thread Two");
+        var t3 = new Thread(() -> {
+            for (var i = 0; i <= 5; i++) {
+                System.out.println("t3");
+                try {
+                    Thread.sleep(1000);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }, "Thread Three");
+
+        System.out.println("T1 name " + t1.getName());
+        System.out.println("T2 name " + t2.getName());
+        System.out.println("T3 name " + t3.getName());
+
+        t1.setPriority(Thread.MAX_PRIORITY);
+        t1.start();
+        Thread.sleep(10);
+
+        t2.setPriority(Thread.MIN_PRIORITY);
+        t2.start();
+
+        Thread.sleep(10);
+
+        t3.setPriority(6);
+        t3.start();
+
+
+        t1.join();
+        t2.join();
+        t3.join();
+
+        System.out.println("bye");
     }
 
     /**
